@@ -16,7 +16,8 @@ error 500 do
 end
 
 nylas = Nylas::Client.new(
-  api_key: ENV['V3_TOKEN']
+  api_key: ENV['NYLAS_API_KEY'],
+  api_uri: ENV['NYLAS_API_URI']
 )
 
 get '/nylas/auth' do
